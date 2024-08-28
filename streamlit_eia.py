@@ -4,9 +4,9 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import streamlit as st
-path = r'C:\Users\User\PYTHON\Data\wpsr.csv'
-wpsr = pd.read_csv(path)
-p_st = pd.read_excel(r'C:\Users\User\PYTHON\Data\WPSR\psw01.xlsx', sheet_name = 'Data 1')
+
+wpsr = pd.read_csv('wpsr')
+p_st = pd.read_excel('psw01.xlsx', sheet_name = 'Data 1')
 update = pd.to_datetime(p_st.iloc[:,0], errors = 'coerce').dt.strftime('%Y-%m-%d').iloc[-1]
 st.set_page_config(layout="wide")
 st.title('☣ Weekly Petroleum Status Report')
