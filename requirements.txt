@@ -3,3 +3,7 @@ pandas
 numpy
 plotly
 streamlit
+plotly.express
+plotly.graph_objects
+plotly.subplots
+make_subplots
