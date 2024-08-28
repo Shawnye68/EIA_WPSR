@@ -10,7 +10,18 @@ p_st = pd.read_excel('psw01.xlsx', sheet_name = 'Data 1')
 update = pd.to_datetime(p_st.iloc[:,0], errors = 'coerce').dt.strftime('%Y-%m-%d').iloc[-1]
 st.set_page_config(page_title = 'wpsr_figure', page_icon = '📈', layout = "wide")
 st.title('📈 Weekly Petroleum Status Report')
-st.markdown(f'<div style = "text-align: right;"> Last updated：{update} </div>', unsafe_allow_html=True)
+st.markdown(f'''
+            <div style = "display: flex; justify-content: space-between; align-items: center;">
+                <div style = "text-align: left; font-size: 19px;">
+                    Last updated: {update}
+                </div>
+                <div style = "display: flex; align-items: center;">
+                    <img src = "https://github.com/Shawnye68/shawnye/blob/main/Bart.jpg?raw=true" 
+                    style = "width: 30px; height: 30px; border-radius: 50%; margin-right: 8px;">
+                    <span>Shawnye</span>
+                </div>
+            </div>
+            ''', unsafe_allow_html=True)
 st.write('---')
 #%%
 ticker = ['WCRSTUS1','WCESTUS1', 'WCSSTUS1', 'WGTSTUS1', 'WKJSTUS1', 'WDISTUS1', 'WTESTUS1',
