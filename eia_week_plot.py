@@ -1,15 +1,15 @@
 import pandas as pd
 import numpy as np
+import streamlit as st
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
-import streamlit as st
 
-wpsr = pd.read_csv('WPSR.csv')
+wpsr = pd.read_csv('wpsr.csv')
 p_st = pd.read_excel('psw01.xlsx', sheet_name = 'Data 1')
 update = pd.to_datetime(p_st.iloc[:,0], errors = 'coerce').dt.strftime('%Y-%m-%d').iloc[-1]
 st.set_page_config(layout="wide")
-st.title('☣ Weekly Petroleum Status Report')
+st.title('📈 Weekly Petroleum Status Report')
 st.markdown(f'<div style = "text-align: right;"> Last updated：{update} </div>', unsafe_allow_html=True)
 st.write('---')
 #%%
