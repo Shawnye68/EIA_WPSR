@@ -3,4 +3,3 @@ pandas
 numpy
 plotly
 streamlit
-make_subplots
