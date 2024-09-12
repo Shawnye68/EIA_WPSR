@@ -1,1 +1,1 @@
-[wpsr-figure.streamlit.app](wpsr-figure.streamlit.app)
+[wpsr-figure.streamlit.app](https://wpsr-figure.streamlit.app/)
